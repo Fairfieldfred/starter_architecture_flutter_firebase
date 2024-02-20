@@ -1,4 +1,4 @@
-import 'package:starter_architecture_flutter_firebase/src/features/entries/domain/entry_job.dart';
+import '/src/features/entries/domain/entry_job.dart';
 
 /// Temporary model class to store the time tracked and pay for a job
 class JobDetails {

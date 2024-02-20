@@ -1,7 +1,7 @@
-name: starter_architecture_flutter_firebase
+name: a_hole_meter
 description: A new Flutter project.
 
-publish_to: 'none'
+publish_to: "none"
 version: 2.1.0
 
 environment:
@@ -22,9 +22,21 @@ dependencies:
   go_router: 12.1.1
   intl: ^0.18.1
   rxdart: ^0.27.7
-  shared_preferences: ^2.2.2
+  image_cropper: ^5.0.1
+  image_downloader:
+    git:
+      url: https://github.com/VikasTailorbird/image_downloader
   # the annotation package containing @riverpod
   riverpod_annotation: 2.3.1
+  shared_preferences: ^2.2.2
+  image_picker: ^1.0.2
+  camera: ^0.10.5+3
+  path: ^1.8.2
+  path_provider: ^2.1.0
+  google_mlkit_commons:
+    # path: /Users/fred/Flutter Pojects/a_hole_meter/packages/google_mlkit_commons
+  google_mlkit_face_detection:
+    path: /Users/fred/Flutter Pojects/a_hole_meter/packages/google_mlkit_face_detection
 
 dev_dependencies:
   flutter_test:
@@ -45,3 +57,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/time-tracking.svg
+    - assets/dad1.png
+    - assets/glory_hole.png

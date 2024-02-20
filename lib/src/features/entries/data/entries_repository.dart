@@ -1,9 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:starter_architecture_flutter_firebase/src/features/authentication/data/firebase_auth_repository.dart';
-import 'package:starter_architecture_flutter_firebase/src/features/authentication/domain/app_user.dart';
-import 'package:starter_architecture_flutter_firebase/src/features/entries/domain/entry.dart';
-import 'package:starter_architecture_flutter_firebase/src/features/jobs/domain/job.dart';
+
+import '/src/features/authentication/data/firebase_auth_repository.dart';
+import '/src/features/authentication/domain/app_user.dart';
+import '/src/features/entries/domain/entry.dart';
+import '/src/features/jobs/domain/job.dart';
 
 class EntriesRepository {
   const EntriesRepository(this._firestore);

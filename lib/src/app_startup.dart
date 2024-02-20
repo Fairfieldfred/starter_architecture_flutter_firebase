@@ -2,9 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:starter_architecture_flutter_firebase/firebase_options.dart';
-import 'package:starter_architecture_flutter_firebase/src/constants/app_sizes.dart';
-import 'package:starter_architecture_flutter_firebase/src/features/onboarding/data/onboarding_repository.dart';
+
+import '/firebase_options.dart';
+import '/src/constants/app_sizes.dart';
+import '/src/features/onboarding/data/onboarding_repository.dart';
 
 part 'app_startup.g.dart';
 

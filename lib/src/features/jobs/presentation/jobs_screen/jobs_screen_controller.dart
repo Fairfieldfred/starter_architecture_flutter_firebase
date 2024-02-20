@@ -1,9 +1,10 @@
 import 'dart:async';
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:starter_architecture_flutter_firebase/src/features/authentication/data/firebase_auth_repository.dart';
-import 'package:starter_architecture_flutter_firebase/src/features/jobs/data/jobs_repository.dart';
-import 'package:starter_architecture_flutter_firebase/src/features/jobs/domain/job.dart';
+
+import '/src/features/authentication/data/firebase_auth_repository.dart';
+import '/src/features/jobs/data/jobs_repository.dart';
+import '/src/features/jobs/domain/job.dart';
 
 part 'jobs_screen_controller.g.dart';
 

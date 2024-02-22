@@ -74,13 +74,13 @@ class _GalleryViewState extends State<GalleryView> {
               Icons.image,
               size: 200,
             ),
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: ElevatedButton(
-          onPressed: _getImageAsset,
-          child: const Text('From Assets'),
-        ),
-      ),
+      // Padding(
+      //   padding: const EdgeInsets.symmetric(horizontal: 16),
+      //   child: ElevatedButton(
+      //     onPressed: _getImageAsset,
+      //     child: const Text('From Assets'),
+      //   ),
+      // ),
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: ElevatedButton(

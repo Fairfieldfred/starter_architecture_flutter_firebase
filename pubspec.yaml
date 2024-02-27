@@ -37,6 +37,8 @@ dependencies:
     # path: /Users/fred/Flutter Pojects/a_hole_meter/packages/google_mlkit_commons
   google_mlkit_face_detection:
     path: /Users/fred/Flutter Pojects/a_hole_meter/packages/google_mlkit_face_detection
+  image: ^4.1.7
+  exif: ^3.3.0
 
 dev_dependencies:
   flutter_test:
@@ -57,5 +59,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/time-tracking.svg
-    - assets/dad1.png
+    - assets/images/dad1.png
     - assets/glory_hole.png

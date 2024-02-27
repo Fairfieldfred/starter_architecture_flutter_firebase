@@ -50,3 +50,27 @@ double translateY(
       return y * canvasSize.height / imageSize.height;
   }
 }
+
+double translateYTop(
+  double y,
+  Size canvasSize,
+  Size imageSize,
+  InputImageRotation rotation,
+  CameraLensDirection cameraLensDirection,
+) {
+  switch (rotation) {
+    case InputImageRotation.rotation90deg:
+    case InputImageRotation.rotation270deg:
+      return y *
+          canvasSize.height /
+          (Platform.isIOS ? imageSize.height : imageSize.width);
+    case InputImageRotation.rotation0deg:
+    case InputImageRotation.rotation180deg:
+      if (imageSize.width > imageSize.height) {
+        return (y * canvasSize.height / imageSize.height) +
+            ((imageSize.height / imageSize.width * canvasSize.height));
+      } else {
+        return y * canvasSize.height / imageSize.height;
+      }
+  }
+}

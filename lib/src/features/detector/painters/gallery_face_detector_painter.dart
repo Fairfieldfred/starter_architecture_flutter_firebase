@@ -22,11 +22,19 @@ class GalleryFaceDetectorPainter extends CustomPainter {
     final Paint paint1 = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.0
-      ..color = Colors.red;
+      ..color = Colors.yellow;
     final Paint paint2 = Paint()
       ..style = PaintingStyle.fill
       ..strokeWidth = 1.0
       ..color = Colors.green;
+    final Paint paint3 = Paint()
+      ..style = PaintingStyle.fill
+      ..strokeWidth = 1.0
+      ..color = Colors.red;
+    final Paint paint4 = Paint()
+      ..style = PaintingStyle.fill
+      ..strokeWidth = 1.0
+      ..color = Colors.blue;
 
     for (final Face face in faces) {
       final left = translateX(

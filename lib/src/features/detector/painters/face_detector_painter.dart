@@ -24,11 +24,19 @@ class FaceDetectorPainter extends CustomPainter {
     final Paint paint1 = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.0
-      ..color = Colors.red;
+      ..color = Colors.yellow;
     final Paint paint2 = Paint()
-      ..style = PaintingStyle.fill
+      ..style = PaintingStyle.stroke
       ..strokeWidth = 1.0
       ..color = Colors.green;
+    final Paint paint3 = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.0
+      ..color = Colors.red;
+    final Paint paint4 = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.0
+      ..color = Colors.blue;
 
     for (final Face face in faces) {
       final left = translateX(
@@ -60,10 +68,20 @@ class FaceDetectorPainter extends CustomPainter {
         cameraLensDirection,
       );
 
-      canvas.drawRect(
-        Rect.fromLTRB(left, top, right, bottom),
-        paint1,
-      );
+      final boxColor = face.smilingProbability! > 0.5 &&
+              face.leftEyeOpenProbability! > 0.5 &&
+              face.rightEyeOpenProbability! > 0.5
+          ? paint4
+          : face.smilingProbability! > 0.5 &&
+                  (face.leftEyeOpenProbability! < 0.5 ||
+                      face.rightEyeOpenProbability! < 0.5)
+              ? paint3
+              : face.smilingProbability! < 0.5 &&
+                      (face.leftEyeOpenProbability! < 0.5 ||
+                          face.rightEyeOpenProbability! < 0.5)
+                  ? paint2
+                  : paint1;
+      canvas.drawRect(Rect.fromLTRB(left, top, right, bottom), boxColor);
 
       void paintContour(FaceContourType type) {
         final contour = face.contours[type];
@@ -87,7 +105,7 @@ class FaceDetectorPainter extends CustomPainter {
                   ),
                 ),
                 1,
-                paint1);
+                boxColor);
           }
         }
       }
@@ -113,7 +131,7 @@ class FaceDetectorPainter extends CustomPainter {
                 ),
               ),
               2,
-              paint2);
+              boxColor);
         }
       }
 

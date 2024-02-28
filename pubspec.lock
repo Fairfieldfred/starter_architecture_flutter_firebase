@@ -608,7 +608,7 @@ packages:
   google_mlkit_face_detection:
     dependency: "direct main"
     description:
-      path: "/Users/fred/Flutter Pojects/a_hole_meter/packages/google_mlkit_face_detection"
+      path: "/Users/fred/Flutter_projects/a_hole_meter/packages/google_mlkit_face_detection"
       relative: false
     source: path
     version: "0.9.0"

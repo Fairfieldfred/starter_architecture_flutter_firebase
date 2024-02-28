@@ -36,7 +36,7 @@ dependencies:
   google_mlkit_commons:
     # path: /Users/fred/Flutter Pojects/a_hole_meter/packages/google_mlkit_commons
   google_mlkit_face_detection:
-    path: /Users/fred/Flutter Pojects/a_hole_meter/packages/google_mlkit_face_detection
+    path: /Users/fred/Flutter_projects/a_hole_meter/packages/google_mlkit_face_detection
   image: ^4.1.7
   exif: ^3.3.0
 
